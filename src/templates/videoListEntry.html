@@ -1,9 +1,9 @@
-<li class="video-list-entry media">
+<li class="video-list-entry media" ng-controller="AppCtrl">
   <div class="media-left">
-    <img class="media-object" ng-src={{videos[$index].snippet.thumbnails.default.url}} />
+    <img class="media-object" ng-src={{ctrl.videos[$index].snippet.thumbnails.default.url}} />
   </div>
   <div class="media-body">
-    <div class="video-list-entry-title" >Video Title: {{videos[$index].snippet.title}}</div>
-    <div class="video-list-entry-detail">Video Description: {{videos[$index].snippet.description}}</div>
+    <div class="video-list-entry-title" >Video Title: {{ctrl.videos[$index].snippet.title}}</div>
+    <div class="video-list-entry-detail">Video Description: {{ctrl.videos[$index].snippet.description}}</div>
   </div>
 </li>

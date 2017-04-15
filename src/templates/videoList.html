@@ -1,3 +1,4 @@
-<ul class="video-list" ng-controller="VideoListEntryCtrl" >
-  <video-list-entry ng-repeat="video in videos"><h5><em>videoListEntry</em> component goes here</h5></video-list-entry>
+<ul class="video-list" >
+  <video-list-entry ng-repeat="video in ctrl.videos" video="video"><h5><em>videoListEntry {{ctrl.video}}</em> component goes here</h5></video-list-entry>
+
 </ul>
