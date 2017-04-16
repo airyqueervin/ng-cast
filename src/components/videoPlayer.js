@@ -1,5 +1,5 @@
 angular.module('video-player')
-.controller('VideoPlayerCtrl', function () {
+.controller('VideoPlayerController', function() {
   this.videoUrl = () => {
     return this.video ? `https://www.youtube.com/embed/${this.video.id.videoId}` : '';
   };
@@ -9,9 +9,10 @@ angular.module('video-player')
     scope: {
       video: '<'
     },
+    restrict: 'E',
+    controller: 'VideoPlayerController',
     controllerAs: 'ctrl',
     bindToController: true,
-    controller: 'VideoPlayerCtrl',
     templateUrl: 'src/templates/videoPlayer.html'
   };
 });
